@@ -16,7 +16,7 @@ public class Calculator {
     public double div(int aa, int bb) {
         double result = 0;
         try {
-            result = aa / bb;
+            result = (double)aa / (double)bb;
         } catch (Exception e) {
             System.out.println(e);
         }
