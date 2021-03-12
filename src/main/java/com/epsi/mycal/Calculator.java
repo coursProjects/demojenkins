@@ -13,6 +13,11 @@ public class Calculator {
         return aa * bb;
     }
 
+    /** First Digit.
+     * @param aa aa param.
+     * @param bb bb param.
+     * @return the division of aa and bb.
+     */
     public double div(int aa, int bb) {
         double result = 0;
         try {
@@ -27,10 +32,9 @@ public class Calculator {
         return aa % 2 == 0;
     }
 
-    /**
-     *
-     * @param aa
-     * @return true if it's a first digit
+    /** FirstDigit.
+     * @param aa aa param.
+     * @return true if it's a first digit.
      */
     public boolean isFirstDigit(int aa) {
         boolean isPremier = true;

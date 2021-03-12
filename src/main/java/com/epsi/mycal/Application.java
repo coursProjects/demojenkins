@@ -4,9 +4,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Application {
-    /**
-     * Methode main
-     * @param args
+    /** Methode Main.
+     * @param args args.
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
@@ -27,14 +26,12 @@ public class Application {
             boolean result;
             if (choice == 5) {
                 result = calculator.isPair(number);
-            }
-            else {
+            } else {
                 result = calculator.isFirstDigit(number);
             }
 
             System.out.println("Result:" + result);
-        }
-        else {
+        } else {
             System.out.println("Please enter two numbers");
             System.out.println("First number : ");
             int firstNumber = scanner.nextInt();
