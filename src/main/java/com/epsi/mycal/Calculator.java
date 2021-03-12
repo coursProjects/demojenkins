@@ -14,7 +14,13 @@ public class Calculator {
     }
 
     public double div(int aa, int bb) {
-        return aa / bb;
+        double result = 0;
+        try {
+            result = aa / bb;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return result;
     }
 
     public boolean isPair(int aa) {
