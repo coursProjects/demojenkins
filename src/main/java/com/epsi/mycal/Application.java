@@ -37,11 +37,21 @@ public class Application {
             int secondNumber = scanner.nextInt();
             int result;
             switch (choice) {
-                case 1 -> result = calculator.add(firstNumber, secondNumber);
-                case 2 -> result = calculator.sub(firstNumber, secondNumber);
-                case 3 -> result = calculator.mul(firstNumber, secondNumber);
-                case 4 -> result = calculator.div(firstNumber, secondNumber);
-                default -> result = 0;
+                case 1:
+                    result = calculator.add(firstNumber, secondNumber);
+                    break;
+                case 2:
+                    result = calculator.sub(firstNumber, secondNumber);
+                    break;
+                case 3:
+                    result = calculator.mul(firstNumber, secondNumber);
+                    break;
+                case 4:
+                    result = calculator.div(firstNumber, secondNumber);
+                    break;
+                default:
+                    result = 0;
+                    break;
             }
             System.out.println(result);
         }
