@@ -38,4 +38,42 @@ public class CalculatorTest {
         assertEquals(actual, -1);
     }
 
+    @Test
+    public void testMul() {
+
+        int a = 2;
+        int b = 3;
+
+        Calculator calc = new Calculator();
+        int actual = calc.mul(a, b);
+        assertEquals(actual, 6);
+    }
+
+
+    @Test
+    public void testDiv() {
+
+        int a = 4;
+        int b = 2;
+
+        Calculator calc = new Calculator();
+        int actual = calc.div(a, b);
+        assertEquals(actual, 2);
+    }
+
+    @Test
+    public void testPair() {
+
+        Calculator calc = new Calculator();
+        assertTrue(calc.isPair(2));
+        assertFalse(calc.isPair(3));
+    }
+
+    @Test
+    public void testFirstDigit() {
+
+        Calculator calc = new Calculator();
+        assertTrue(calc.isFirstDigit(3));
+        assertFalse(calc.isFirstDigit(4));
+    }
 }
