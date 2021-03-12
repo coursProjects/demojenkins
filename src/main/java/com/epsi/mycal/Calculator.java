@@ -13,7 +13,7 @@ public class Calculator {
         return aa * bb;
     }
 
-    public int div(int aa, int bb){
+    public double div(int aa, int bb) {
         return aa / bb;
     }
 
@@ -21,12 +21,17 @@ public class Calculator {
         return aa % 2 == 0;
     }
 
+    /**
+     *
+     * @param aa
+     * @return true if it's a first digit
+     */
     public boolean isFirstDigit(int aa) {
         boolean isPremier = true;
         if (aa < 0) {
             isPremier = false;
         } else if (aa != 0 && aa != 1) {
-            for (int i = 2; i <= aa/2; i++) {
+            for (int i = 2; i <= aa / 2; i++) {
                 if (aa != i && aa % i == 0) {
                     isPremier = false;
                     break;

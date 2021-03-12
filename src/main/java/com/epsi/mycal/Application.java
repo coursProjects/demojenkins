@@ -4,7 +4,10 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Application {
-
+    /**
+     * Methode main
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
 
@@ -22,10 +25,12 @@ public class Application {
             System.out.println("Enter a number: ");
             int number = scanner.nextInt();
             boolean result;
-            if (choice == 5)
+            if (choice == 5) {
                 result = calculator.isPair(number);
-            else
+            }
+            else {
                 result = calculator.isFirstDigit(number);
+            }
 
             System.out.println("Result:" + result);
         }
@@ -35,22 +40,22 @@ public class Application {
             int firstNumber = scanner.nextInt();
             System.out.print("Second number: ");
             int secondNumber = scanner.nextInt();
-            int result;
+            String result;
             switch (choice) {
                 case 1:
-                    result = calculator.add(firstNumber, secondNumber);
+                    result = String.valueOf(calculator.add(firstNumber, secondNumber));
                     break;
                 case 2:
-                    result = calculator.sub(firstNumber, secondNumber);
+                    result = String.valueOf(calculator.sub(firstNumber, secondNumber));
                     break;
                 case 3:
-                    result = calculator.mul(firstNumber, secondNumber);
+                    result = String.valueOf(calculator.mul(firstNumber, secondNumber));
                     break;
                 case 4:
-                    result = calculator.div(firstNumber, secondNumber);
+                    result = String.valueOf(calculator.div(firstNumber, secondNumber));
                     break;
                 default:
-                    result = 0;
+                    result = "bad choice";
                     break;
             }
             System.out.println(result);
